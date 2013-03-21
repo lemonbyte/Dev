@@ -1,0 +1,12 @@
+    <script type="text/javascript">
+    function enable_https()
+    {
+        if(window.location.protocol != "https:"){
+            var oldURL = window.location.href
+            var newURL = oldURL.replace("http:","https:");
+            window.location = newURL;
+            }
+    }
+
+    //enable_https();
+    </script>
