@@ -1,0 +1,37 @@
+
+
+
+                <script type="text/javascript">
+                                      (function() {
+                                       function get_domain() {
+                                        var host = window.location.host;
+                                        var port = host.indexOf(':');
+                                        var domain = port>0?host.substr(0,port):host;
+                                        var parts = domain.split('.');
+                                        return parts[parts.length-2]+'.'+parts[parts.length-1];
+                                                               } 
+                                       	var url = 'dummy.js';
+
+                                                       var script = '<scr'+'ipt type="text/javascript" src="'+url+'"></scr'+'ipt>';
+                                                       document.write(script);
+                                                       console.log(script);
+                                                      })();
+                                               </script> 
+                                               
+                 <script type="text/javascript">
+
+                                 
+
+                                if (typeof(Consent) != 'undefined' && Consent.has_optin('stats')) {
+     							
+     					
+
+
+                                };
+                                                          
+                               console.log(typeof(Consent) != 'undefined' && Consent.has_optin('stats'));
+                               //console.log(Consent);
+                               console.log(Consent.has_optin('stats'));
+                               //console.log(typeof(Consent) != 'undefined' && Consent.has_optin('stats'));
+                      </script>
+

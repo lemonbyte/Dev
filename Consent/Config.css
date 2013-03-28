@@ -1,0 +1,118 @@
+#overlay{
+
+position: fixed;
+z-index: 10010;
+top:0px;
+left: 0px;
+height: 100%;
+width:100%;
+background-color: black;
+opacity: 0.75;
+filter:Alpha(opacity=75);
+
+
+}
+
+#configbox{
+	position: absolute;
+	left: 50%;
+	top: 30px;
+	width: 550px;
+	z-index: 100020;
+	margin: 0 0 0 -275px;
+	line-height: 190%;
+		-webkit-border-radius:6px 6px 6px 6px;
+	-moz-radius: 6px 6px 6px 6px;
+	border-radius: 6px 6px 6px 6px;
+}
+
+.configboxc{
+	font-family:sans-serif;
+	font-size:12px;
+	text-align: left;
+	border: 3px solid white;
+	background-color: white;
+		-webkit-border-radius:6px 6px 6px 6px;
+	-moz-radius: 6px 6px 6px 6px;
+	border-radius: 6px 6px 6px 6px;
+}
+
+#configtitel{
+
+font-size: 14px;
+font-weight: bold;
+font-family:sans-serif;
+color: white;
+background-color: #333;
+padding: 8px;
+text-align: center;
+-webkit-border-radius:6px 6px 6px 6px;
+-moz-radius: 6px 6px 6px 6px;
+border-radius: 6px 6px 6px 6px;
+
+}
+
+#configcontent{
+	color: #666;
+	-webkit-border-radius:6px 6px 6px 6px;
+	-moz-radius: 6px 6px 6px 6px;
+	border-radius: 6px 6px 6px 6px;
+}
+
+#description{
+	padding: 10px;
+}
+
+#settings{
+	
+	padding: 4px;
+	margin: 0px 2px 5px 0px;
+}
+
+#settitle{
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	color: black;
+
+}
+
+#pic{
+text-align: center;
+margin: 4px 0;
+
+}
+.stOption{
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+
+#setup{
+	padding: 5px 10px;
+}
+
+#stEnabledList{
+	float: left;
+	width: 50%;
+}
+
+#stDisabledList{
+	float: left;
+	width: 50%;
+}
+
+#buttons{
+	padding: 10px 10px 10px 10px;
+	text-align: right;
+}
+
+#Cancel{
+
+
+}
+
+#Save{
+
+
+}

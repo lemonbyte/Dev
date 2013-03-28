@@ -1,0 +1,235 @@
+<html>
+<head>
+	<title>Cookie Banner</title>
+	<!-- Add this to your own page -->
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+
+	<link rel="stylesheet" href="Config.css"/>
+	<!-- End Add this to your own page -->
+</head>
+<body>
+	
+<div id="overlay">
+</div>
+
+<div id="configbox" class="configboxc">
+
+	<div id="configtitel">
+		Cookie instellingen
+	</div>
+
+	<div id="configcontent">
+
+		<div id="description">	
+			<p>Cookies zijn kleine tekstbestanden die door uw browser worden opgeslagen. Deze website maakt gebruik van cookies om de gebruikservaring te verbeteren en extra functionaliteit aan te bieden zoals het onthouden van uw login en de integratie met social media zoals Facebook en Twitter. De cookies bevatten alleen geanonimiseerde informatie, uw naam of emailadres zullen dus niet worden opgeslagen.
+		    </p>
+
+			<p>
+			Via onderstaande instellingen kunt u aangeven welke cookies u wilt accepteren. Houd er rekening mee dat door het niet accepteren van cookies een deel van de functionaliteit van deze website niet beschikbaar kan zijn. Meer informatie over de categorieen vindt u in onze.
+			</p>
+		</div>
+
+
+		<div id="settings">
+
+			<div id="settitle">
+				<p>Kies uw gewenste cookie instellingen</p>
+			</div>
+
+			<div id="pic">
+				<img  src="conifg1.png">
+			</div>		
+
+			<div class="stOption" style="float: left; width: 33%; text-align: center"> <input type="radio" name="stSet" value="1" onclick="optin(1)"></div>
+
+			<div class="stOption" style="float: left; width: 33%; text-align: center"> <input type="radio" name="stSet" value="2" onclick="optin(2)"></div>
+
+			<div class="stOption" style="float: left; width: 33%; text-align: center"> <input type="radio" name="stSet" value="3" onclick="optin(3)"></div>
+
+			<div style="clear: both; height: 1px;">&nbsp;</div>
+
+		</div>
+		
+	
+		<div id="setup">
+
+			<div id="stEnabledList"><span><strong>Deze website zal wel:</strong></span>
+
+				<div class="stEnabled-1" style="display: block; ">
+					<img src="icon-correct.png"> Noodzakelijke cookies plaatsen
+				</div>
+
+				<div class="stEnabled-1" style="display: block; ">
+					<img src="icon-correct.png"> Anonieme statistieken bijhouden
+				</div>
+
+				<div class="stEnabled-2" style="display: none; ">
+					<img src="icon-correct.png"> Instellingen onthouden
+				</div>
+
+				<div class="stEnabled-3" style="display: none; ">
+					<img src="icon-correct.png"> Informatie delen t.b.v. advertenties
+				</div>
+
+				<div class="stEnabled-3" style="display: none; ">
+					<img src="icon-correct.png"> Social media opties weergeven
+				</div>
+
+			</div>
+
+			<div id="stDisabledList"><span><strong>Deze website zal niet:</strong></span>
+
+				<div class="stDisabled-1" style="display: none; ">
+					<img src="icon-wrong.png"> Noodzakelijke cookies plaatsen
+				</div>
+
+				<div class="stDisabled-1" style="display: none; ">
+					<img src="icon-wrong.png"> Anonieme statistieken bijhouden
+				</div>
+
+				<div class="stDisabled-2" style="display: block; ">
+					<img src="icon-wrong.png"> Instellingen onthouden
+				</div>
+
+				<div class="stDisabled-3" style="display: block; ">
+					<img src="icon-wrong.png"> Informatie delen t.b.v. advertenties
+				</div>
+
+				<div class="stDisabled-3" style="display: block; ">
+					<img src="icon-wrong.png"> Social media opties weergeven
+				</div>
+
+				<div class="stDisabled-4" style="display: block; ">
+					<img src="icon-wrong.png"> Identificeerbare informatie delen
+				</div>
+
+			</div>
+
+			<div style="clear: both; height: 1px;">&nbsp;</div>
+		</div>
+
+
+		<div id="buttons">
+			<div>
+		 		<span id="Save"><strong>Opslaan</strong><span>
+		 	</div>	
+		</div>
+
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	
+	var   JQ = jQuery.noConflict();
+    console.log('uitvoeren');
+
+
+    JQ('input[name="stSet"]').prop('checked', false);
+ 	JQ('input[name="stSet"]')[0].checked = true;
+ 	document.cookie = "site_consent=false%3Afalse%3Afalse%3Afalse; expires=Sun, 29 Dec 2013 18:23:11 GMT";
+
+	(function delete_layers(){
+		JQ('#Save').on('click',function(){
+			window.location = "http://www.google.com/"
+		})
+	})();
+
+	function setup_one(){
+	deletepic();
+	JQ('#pic').append('<img src="conifg1.png"/>');
+
+	JQ('div.stEnabled-1').css("display", "block");
+	JQ('div.stEnabled-2').css("display", "none");
+	JQ('div.stEnabled-3').css("display", "none");
+
+	JQ('div.stDisabled-1').css("display", "none");
+	JQ('div.stDisabled-2').css("display", "block");
+	JQ('div.stDisabled-3').css("display", "block");
+	JQ('div.stDisabled-4').css("display", "block");
+	}
+
+	function setup_two(){
+		deletepic();
+		JQ('#pic').append('<img src="conifg2.png"/>');
+	
+		JQ('div.stEnabled-1').css("display", "block");
+		JQ('div.stEnabled-2').css("display", "block");
+		JQ('div.stEnabled-3').css("display", "none");
+
+		JQ('div.stDisabled-1').css("display", "none");
+		JQ('div.stDisabled-2').css("display", "none");
+		JQ('div.stDisabled-3').css("display", "block");
+		JQ('div.stDisabled-4').css("display", "block");
+	}
+
+	function setup_three(){
+	deletepic();
+	JQ('#pic').append('<img src="conifg3.png"/>');
+
+		JQ('div.stEnabled-1').css("display", "block");
+		JQ('div.stEnabled-2').css("display", "block");
+		JQ('div.stEnabled-3').css("display", "block");
+
+		JQ('div.stDisabled-1').css("display", "none");
+		JQ('div.stDisabled-2').css("display", "none");
+		JQ('div.stDisabled-3').css("display", "none");
+		JQ('div.stDisabled-4').css("display", "block");
+
+	}
+
+	function deletepic(){
+		JQ('#pic > img').remove();
+	}
+
+</script>
+
+
+
+    <script type="text/javascript">
+
+	function set_Date(exdays){
+
+		var $exdays = exdays;
+		  var exdate =new Date();
+		  exdate.setDate(exdate.getDate() + $exdays);
+		  
+	  return exdate;
+	}
+
+	function setCookie(cookie_name_key,cookie_value,exdays){
+
+	  var $exdays = exdays,
+	      $cookie_name_key = cookie_name_key,
+	      $cookie_value = cookie_value;
+
+	  exdate = set_Date(exdays);
+	  var $cookieWrite = escape($cookie_name_key) + '=' + escape($cookie_value) + (($exdays==null) ? "" : "; expires="+exdate.toUTCString());
+	  console.log($cookieWrite);
+	  document.cookie = $cookieWrite;
+
+		  
+	}
+
+	function optin(choise){
+	
+
+                	if(choise == 1 ){
+                		setCookie("site_consent","false:false:false:false",365);
+                		setup_one();
+                	}
+                	else if( choise == 2){
+						setCookie("site_consent","stats:social:false:false",365);
+						setup_two();
+                	}
+                	else if ( choise == 3){
+                		setCookie("site_consent","stats:social:ads:interests",365);
+                		setup_three();
+                	}
+     }
+    </script> 
+
+</body>
+
+</html>
